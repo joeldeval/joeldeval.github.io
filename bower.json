@@ -1,0 +1,23 @@
+{
+  "name": "joeldeval.github.io",
+  "homepage": "https://github.com/joeldeval/joeldeval.github.io",
+  "authors": [
+    "joeldeval <jooelvaldivi@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fullpage.js": "~2.7.6",
+    "bootstrap": "~3.3.6",
+    "font-awesome": "~4.5.0"
+  }
+}
