@@ -28,36 +28,7 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 
 	<script type="text/javascript" src="bower_components/fullpage.js/jquery.fullPage.js"></script>
-	<!-- <script type="text/javascript" src="examples.js"></script> -->
-
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#fullpage').fullpage({
-				'verticalCentered': false,
-				'css3': true,
-				'sectionsColor': ['#F0F2F4', '#fff', '#fff', '#fff'],
-				'navigation': true,
-				'navigationPosition': 'right',
-				'navigationTooltips': ['Inicio', '¿Quién soy?', '¿Qué hago?', 'Simple'],
-				'afterLoad': function(anchorLink, index){
-					if(index == 2){
-						$('#iphone3, #iphone2, #iphone4').addClass('active');
-					}
-				},
-				'onLeave': function(index, nextIndex, direction){
-					if (index == 3 && direction == 'down'){
-						$('.section').eq(index -1).removeClass('moveDown').addClass('moveUp');
-					}
-					else if(index == 3 && direction == 'up'){
-						$('.section').eq(index -1).removeClass('moveUp').addClass('moveDown');
-					}
-					$('#staticImg').toggleClass('active', (index == 2 && direction == 'down' ) || (index == 4 && direction == 'up'));
-					$('#staticImg').toggleClass('moveDown', nextIndex == 4);
-					$('#staticImg').toggleClass('moveUp', index == 4 && direction == 'up');
-				}
-			});
-		});
-	</script>
+	<script type="text/javascript" src="javascripts/main.js"></script>
 
 </head>
 <body>
@@ -91,7 +62,19 @@
 
 			<div class="box">
 				<h2>Desarrollador de Software</h2>
-				 <strong>Herramientas</strong>  de programación en las cuales desarrollo.
+				 	<p>
+				 <strong>Lenguajes</strong>
+				 de programación que he utilizado
+					<span class="label label-default">Javascript</span>
+					<span class="label label-default">Python</span>
+					<span class="label label-default">PHP</span>
+				 </p>.
+
+					<p>
+						<strong>Sistema operativo </strong>
+						preferido
+					<span class="label label-default">Linux</span>
+					</p>
 			</div>
 		</div>
 	</div>
@@ -99,6 +82,7 @@
 	<div class="section moveDown" id="section2">
 		<div class="wrap">
 			<div class="imgsContainer">
+
 				<!-- <img src="images/iphone-red.png" alt="iphone" id="iphone-red" /> -->
 				<!-- <img src="images/iphone-yellow.png" alt="iphone" class="animated rubberBand" /> -->
 				<!-- <img src="images/iphone-blue.png" alt="iphone" id="iphone-blue" /> -->
